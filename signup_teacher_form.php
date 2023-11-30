@@ -25,36 +25,34 @@
 					e.preventDefault();
 						var password = jQuery('#password').val();
 						var cpassword = jQuery('#cpassword').val();
-					if (password == cpassword){
-					var formData = jQuery(this).serialize();
-					$.ajax({
-						type: "POST",
-						url: "teacher_signup.php",
-						data: formData,
-						success: function(html){
-						if(html=='true')
-						{
-						$.jGrowl("Welcome to ALS Learning Management System", { header: 'Sign-up Successful' });
-						var delay = 1000;
-							setTimeout(function(){ window.location = 'dasboard_teacher.php'  }, delay);  
-						}else{
-							$.jGrowl("Your data is not found in the database", { header: 'Sign-up Failed' });
-						}
-						}
-					});
-			
-					}else
-						{
-						$.jGrowl("Your data is not found in the database", { header: 'Sign-up Failed' });
-						}
+					
+						if(password.match(/[a-z]/g) && password.match(/[A-Z]/g) && password.match(/[0-9]/g) && password.match(/[!@#$%^&*]/g) && password.length >= 8) {
+							var formData = jQuery(this).serialize();
+							$.ajax({
+								type: "POST",
+								url: "teacher_signup.php",
+								data: formData,
+								success: function(html){
+									if(html=='true')
+									{
+										if(password == cpassword){
+											$.jGrowl("Welcome to ALS Learning Management System", { header: 'Sign-up Successful' });
+											var delay = 1000;
+											setTimeout(function(){ window.location = 'dasboard_teacher.php' }, delay);  
+										}else{
+											$.jGrowl("Passwords do not match", { header: 'Sign-up Failed' });
+										}
+									}else{
+										$.jGrowl("Your data is not found in the database", { header: 'Sign-up Failed' });
+									}
+								}
+								
+								
+							});
+					} else {
+						$.jGrowl("Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.", { header: 'Sign-up Failed' })
+					}
 				});
 			});
 			</script>
 			<a onclick="window.location='index.php'" id="btn_login" name="login" class="btn" type="submit"><i class="icon-signin icon-large"></i> Click here to Log In</a>
-			
-			
-			
-				
-		
-					
-		
