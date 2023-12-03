@@ -1,3 +1,5 @@
+<link href="admin/assets/form-style.css" rel="stylesheet" media="screen"/>
+
 			<form id="signin_teacher" class="form-signin" method="post">
 					<h3 class="form-signin-heading"><i class="icon-lock"></i> Sign up as Teacher</h3>
 					<input type="text" class="input-block-level"  name="firstname" placeholder="Firstname" required>
@@ -14,12 +16,44 @@
 						}
 						?>
 					</select>
-					<input type="text" class="input-block-level" id="username" name="username" placeholder="Username" required>
-					<input type="password" class="input-block-level" id="password" name="password" placeholder="Password" required>
-					<input type="password" class="input-block-level" id="cpassword" name="cpassword" placeholder="Re-type Password" required>
-					<button id="signin" name="login" class="btn btn-info" type="submit"><i class="icon-check icon-large"></i> Sign in</button>
+					<div class="passwordContainer">
+						<input type="password" class="input-block-level" id="password" name="password" placeholder="Password" required>
+						<img src="admin/images/eye-close.png" alt="eyeclose" id="eyeclose3" class="eyeicon1">
+						<input type="password" class="input-block-level" id="cpassword" name="cpassword" placeholder="Re-type Password" required>
+						<img src="admin/images/eye-close.png" alt="eyeclose" id="eyeclose4" class="eyeicon2">
+					</div>
+					<button id="signin-teacher" name="login" class="btn btn-info" type="submit"><i class="icon-check icon-large"></i> Sign in</button>
 			</form>
 			<script>
+
+				const eyeicon1 = document.querySelector(".eyeicon1")
+				const eyeicon2 = document.querySelector(".eyeicon2")
+				const password = document.getElementById("password")
+				const cpassword = document.getElementById("cpassword")
+				
+				eyeicon1.addEventListener("click", () =>  {
+					console.log("hello")
+					if (password.type === "password") {
+						password.type = "text";
+						eyeicon1.src="admin/images/eye-open.png"
+					} else {
+						password.type = "password";
+						eyeicon1.src="admin/images/eye-close.png"
+					}
+
+				})
+
+				eyeicon2.addEventListener("click", () =>  {
+
+					if (cpassword.type === "password") {
+						cpassword.type = "text";
+						eyeicon2.src="admin/images/eye-open.png"
+					} else {
+						cpassword.type = "password";
+						eyeicon2.src="admin/images/eye-close.png"
+					}
+				})
+
 			jQuery(document).ready(function(){
 			jQuery("#signin_teacher").submit(function(e){
 					e.preventDefault();
@@ -56,3 +90,10 @@
 			});
 			</script>
 			<a onclick="window.location='index.php'" id="btn_login" name="login" class="btn" type="submit"><i class="icon-signin icon-large"></i> Click here to Log In</a>
+			
+			
+			
+				
+		
+					
+		
