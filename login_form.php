@@ -1,7 +1,12 @@
+<link href="admin/assets/form-style.css" rel="stylesheet" media="screen"/>
+
 			<form id="login_form1" class="form-signin" method="post">
 						<h3 class="form-signin-heading"><i class="icon-lock"></i> Sign in</h3>
 						<input type="text" class="input-block-level" id="username" name="username" placeholder="Username" required>
-						<input type="password" class="input-block-level" id="password" name="password" placeholder="Password" required>
+						<div class="passwordContainer">
+							<input type="password" class="input-block-level" id="password" name="password" placeholder="Password" required>
+							<img src="admin/images/eye-close.png" alt="eyeclose" class="eyeicon" id="eyeclose">
+						</div>
 						<button data-placement="right" title="Click Here to Sign In" id="signin" name="login" class="btn btn-info" type="submit"><i class="icon-signin icon-large"></i> Sign In</button>
 														<script type="text/javascript">
 														$(document).ready(function(){
@@ -11,6 +16,21 @@
 														</script>		
 			</form>
 						<script>
+							const eyeicon = document.querySelector(".eyeicon")
+							const password = document.getElementById("password")
+
+							eyeicon.addEventListener("click", () =>  {
+
+							if (password.type === "password") {
+								password.type = "text";
+								eyeicon.src="admin/images/eye-open.png"
+							} else {
+								password.type = "password";
+								eyeicon.src="admin/images/eye-close.png"
+							}
+
+				            })
+
 						jQuery(document).ready(function(){
 						jQuery("#login_form1").submit(function(e){
 								e.preventDefault();
