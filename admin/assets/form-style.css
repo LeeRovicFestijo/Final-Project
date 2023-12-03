@@ -1,0 +1,47 @@
+#login .form-signin {
+    margin: 70px 20px;
+    margin-bottom: 20px;
+}
+
+#btn_login {
+    margin-left: 20px;
+}
+
+.passwordContainer {
+    position: relative;
+}
+
+#eyeclose {
+    top: 20%;
+    right: 4.5%;
+}
+
+#eyeclose1 {
+    top: 8%;
+    right: 4.5%;
+}
+
+#eyeclose2 {
+    top: 57%;
+    right: 4.5%;
+}
+
+#eyeclose3 {
+    top: 8%;
+    right: 4.5%;
+}
+
+#eyeclose4 {
+    top: 57%;
+    right: 4.5%;
+}
+
+#eyeclose,
+#eyeclose1,
+#eyeclose2,
+#eyeclose3,
+#eyeclose4 {
+    position: absolute;
+    width: 30px;
+    cursor: pointer;
+}
