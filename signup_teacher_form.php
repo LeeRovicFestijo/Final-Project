@@ -16,6 +16,7 @@
 						}
 						?>
 					</select>
+					<input type="text" class="input-block-level" id="username" name="username" placeholder="Username" required>
 					<div class="passwordContainer">
 						<input type="password" class="input-block-level" id="password" name="password" placeholder="Password" required>
 						<img src="admin/images/eye-close.png" alt="eyeclose" id="eyeclose3" class="eyeicon1">
