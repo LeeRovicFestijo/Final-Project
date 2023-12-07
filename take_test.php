@@ -89,23 +89,6 @@ if ($count <= 0) {
 								$rowp = mysqli_fetch_array($sqlp);
 								$x = 0;
 								?>
-								<!-- <script>
-									jQuery(document).ready(function () {
-										var timer = 1;
-										jQuery(".questions-table input").hide();
-										setInterval(function () {
-											var timer = jQuery("#timer").text();
-											jQuery("#timer").load("timer.ajax.php");
-											if (timer == 0) {
-												jQuery(".questions-table input").hide();
-												jQuery("#submit-test").show();
-												jQuery("#msg").text("Time's up!!!\nPlease Submit your Answers");
-											} else {
-												jQuery(".questions-table input").show();
-											}
-										}, 990);
-									});
-								</script> -->
 								<script>
                                     jQuery(document).ready(function () {
                                         var timer = 1;
