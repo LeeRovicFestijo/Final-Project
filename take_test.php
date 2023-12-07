@@ -1,19 +1,47 @@
-<?php include('header_dashboard.php'); ?>
-<?php include('session.php'); ?>
-<?php $get_id = $_GET['id']; ?>
-<?php $class_quiz_id = $_GET['class_quiz_id']; ?>
-<?php $quiz_id = $_GET['quiz_id']; ?>
-<?php $quiz_time = $_GET['quiz_time']; ?>
-
-<?php $query1 = mysqli_query($conn, "select * from student_class_quiz where student_id = '$session_id' and class_quiz_id = '$class_quiz_id' ") or die(mysqli_error($conn));
-$count = mysqli_num_rows($query1);
+<?php
+session_start();
 ?>
 
 <?php
-if ($count > 0) {
-} else {
-	mysqli_query($conn, "insert into student_class_quiz (class_quiz_id,student_id,student_quiz_time) values('$class_quiz_id','$session_id','$quiz_time')");
+//Check whether the session variable SESS_MEMBER_ID is present or not
+if (!isset($_SESSION['id']) || ($_SESSION['id'] == '')) {
+    header("location: index.php");
+    exit();
 }
+
+$session_id=$_SESSION['id'];
+?>
+
+<?php
+include('header_dashboard.php');
+
+//Check whether the session variable SESS_MEMBER_ID is present or not
+if (!isset($_SESSION['id']) || ($_SESSION['id'] == '')) {
+    header("location: index.php");
+    exit();
+}
+
+$session_id=$_SESSION['id'];
+$get_id = $_GET['id'];
+$class_quiz_id = $_GET['class_quiz_id'];
+$quiz_id = $_GET['quiz_id'];
+$quiz_time = $_GET['quiz_time'];
+
+$_SESSION['class_quiz_id'] = $class_quiz_id;
+$_SESSION['session_id'] = $session_id;
+
+$query1 = mysqli_query($conn, "SELECT * FROM student_class_quiz WHERE student_id = '$session_id' AND class_quiz_id = '$class_quiz_id' ") or die(mysqli_error($conn));
+$count = mysqli_num_rows($query1);
+
+if ($count <= 0) {
+    // Fetch the quiz_time for the new quiz
+    $newQuizTimeQuery = mysqli_query($conn, "SELECT quiz_time FROM class_quiz WHERE class_quiz_id = '$class_quiz_id'") or die(mysqli_error($conn));
+    $newQuizTimeRow = mysqli_fetch_array($newQuizTimeQuery);
+    $newQuizTime = $newQuizTimeRow['quiz_time'];
+
+    // Insert a new entry for the student with the correct quiz_time
+    mysqli_query($conn, "INSERT INTO student_class_quiz (class_quiz_id, student_id, student_quiz_time) VALUES ('$class_quiz_id','$session_id','$newQuizTime')") or die(mysqli_error($conn));
+} 
 ?>
 
 
@@ -59,11 +87,9 @@ if ($count > 0) {
 								$sqlp = mysqli_query($conn, "SELECT * FROM class_quiz WHERE class_quiz_id = '$class_quiz_id'") or die(mysqli_error($conn
 							));
 								$rowp = mysqli_fetch_array($sqlp);
-								/* mysqli_query($conn,"UPDATE students SET `time-left` = ".$rowp['time']." WHERE stud_id = '".$_SESSION['user_id']."'"); */
-								/* echo $rowp['time']; */
 								$x = 0;
 								?>
-								<script>
+								<!-- <script>
 									jQuery(document).ready(function () {
 										var timer = 1;
 										jQuery(".questions-table input").hide();
@@ -79,7 +105,29 @@ if ($count > 0) {
 											}
 										}, 990);
 									});
-								</script>
+								</script> -->
+								<script>
+                                    jQuery(document).ready(function () {
+                                        var timer = 1;
+                                        jQuery(".questions-table input").hide();
+                                        var interval = setInterval(function () {
+                                            var timerValue = parseInt(jQuery("#timer").text());
+
+                                            // Check if timer has reached zero or less
+                                            if (timerValue <= 0) {
+                                                clearInterval(interval); // Stop the timer
+
+                                                jQuery(".questions-table input").hide();
+                                                jQuery("#submit-test").show();
+                                                jQuery("#msg").text("Recommended time is over!\nContinue Answering!");
+                                            } else {
+                                                // Update the timer value
+                                                jQuery("#timer").load("timer.ajax.php");
+                                                jQuery(".questions-table input").show();
+                                            }
+                                        }, 990);
+                                    });
+                                </script>
 								<form
 									action="take_test.php<?php echo '?id=' . $get_id; ?>&<?php echo 'class_quiz_id=' . $class_quiz_id; ?>&<?php echo 'test=done' ?>&<?php echo 'quiz_id=' . $quiz_id; ?>&<?php echo 'quiz_time=' . $quiz_time; ?>"
 									name="testform" method="POST" id="test-form">
@@ -226,7 +274,8 @@ if ($count > 0) {
 									</center>
 									<?php
 									/* echo "Your Percentage Grade is : <b>".$per."%</b>"; */
-									mysqli_query($conn, "UPDATE student_class_quiz SET `student_quiz_time` = 3600, `grade` = '" . $score . " out of " . ($x - 1) . "' WHERE student_id = '$session_id' and class_quiz_id = '$class_quiz_id'") or die(mysqli_error($conn));
+									// mysqli_query($conn, "UPDATE student_class_quiz SET `student_quiz_time` = $quiz_time, `grade` = '" . $score . " out of " . ($x - 1) . "' WHERE student_id = '$session_id' and class_quiz_id = '$class_quiz_id'") or die(mysqli_error($conn));
+									mysqli_query($conn, "UPDATE student_class_quiz SET student_quiz_time = ($quiz_time-student_quiz_time), grade = '" . $score . " out of " . ($x - 1) . "' WHERE student_id = '$session_id' and class_quiz_id = '$class_quiz_id'") or die(mysqli_error($conn));
 									?>
 									<script>
 										window.location = 'student_quiz_list.php<?php echo '?id=' . $get_id; ?>';
@@ -235,28 +284,6 @@ if ($count > 0) {
 							} /* else { */
 							?>
 							<br />
-							<?php
-							/* $sql = mysqli_query($conn,"SELECT * FROM students WHERE stud_id = '".$_SESSION['user_id']."'");
-							$row = mysqli_fetch_array($sql);
-								if(is_null($row['grade']) AND $row['time-left'] == 3600){ */
-							?>
-							<!--	<a href="?test=ok">Take the test now</a> -->
-							<?php
-							/* 	} else if(is_null($row['grade']) AND $row['time-left'] < 3600 AND $row['time-left'] > 0){ */
-							?>
-							<!--	<a href="?test=ok">Continue your test</a> -->
-							<?php
-							/* 	} else if(!is_null($row['grade'])){
-									$sqlg = mysqli_query($conn,"SELECT * FROM groupcode WHERE course_code = '".$row['course_code']."'");
-									$rowg = mysqli_fetch_array($sqlg);
-									echo "You have already taken <b>".$rowg['course_title']."</b> - <b>".$rowg['course_code']."</b> test.";
-								}
-								if($row['grade']!=''){
-									mysqli_query($conn,"UPDATE students SET `time-left` = 3600 WHERE stud_id = '".$_SESSION['user_id']."'");
-									echo "<br />Your Grade for this Test is :  <b>".$row['grade']."</b>";		
-								}
-							} */
-							?>
 						</div>
 						<div class="block-content collapse in">
 							<div class="span12">
