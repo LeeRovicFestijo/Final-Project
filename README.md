@@ -18,7 +18,7 @@ Based on the given rubric, the group assessed the system and this is the result:
 
 |    Metric   |  4  |  3  |  2  |  1  |
 | ----------- | --- | --- | --- | --- |
-| HTML        | [x] | [ ] | [ ] | [ ] |
+| HTML        |- [x]| [ ] | [ ] | [ ] |
 | CSS         | [x] | [ ] | [ ] | [ ] |
 | Java Script | [x] | [ ] | [ ] | [ ] |
 | Creativity  | [x] | [ ] | [ ] | [ ] |
