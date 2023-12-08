@@ -38,8 +38,6 @@ Based on the given rubric, the group assessed the system and this is the result:
 ## About the System
 
 
-## Conclusion
-
 
 ## Context Diagram
 ![386875071_1373993143547611_2143306515796927028_n](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/33fb4676-73f2-4d5f-abab-2bf90780f187)
