@@ -26,14 +26,14 @@ Based on the given rubric, the group assessed the system and this is the result:
 
 ## Peer Evaluation
 
-| SR-Code                      |         Member         |  Grade  |  Desgination  |
-| ---------------------------- | ---------------------- | ------- | --------------- |
-| 21-05936@g.batstate-u.edu.ph | Bantugon, Mark Kent    |   20%   | [ ] |
-| 23-01023@g.batstate-u.edu.ph | Festijo, Lee Rovic     |   20%   | [ ] |
-| 21-47986@g.batstate-u.edu.ph | Melgarejo, Mikaela     |   20%   | [ ] |
-| 21-08834@g.batstate-u.edu.ph | Salazar, Hariette Mae  |   20%   | [ ] |
-| 21-06397@g.batstate-u.edu.ph | Sanchez, Ma. Catherine |   20%   | [ ] |
-|                              | Total                  |   100%  | [ ] |
+| SR-Code                      |         Member         |  Grade  |        Desgination         |
+| ---------------------------- | ---------------------- | ------- | -------------------------- |
+| 21-05936@g.batstate-u.edu.ph | Bantugon, Mark Kent    |   20%   | System Maintainer          |
+| 23-01023@g.batstate-u.edu.ph | Festijo, Lee Rovic     |   20%   | Programmer                 |
+| 21-47986@g.batstate-u.edu.ph | Melgarejo, Mikaela     |   20%   | Web Developer              |
+| 21-08834@g.batstate-u.edu.ph | Salazar, Hariette Mae  |   20%   | System Analyst             |
+| 21-06397@g.batstate-u.edu.ph | Sanchez, Ma. Catherine |   20%   | Quality Assurance / Tester |
+|                              | Total                  |   100%  |                            |
 
 ## About the System
 
