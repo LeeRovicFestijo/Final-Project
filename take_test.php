@@ -117,14 +117,10 @@ if ($count <= 0) {
 									<?php
 									$sqla = mysqli_query($conn, "select * FROM class_quiz 
 										LEFT JOIN quiz ON quiz.quiz_id  = class_quiz.quiz_id
-										where teacher_class_id = '$get_id' 
+										where teacher_class_id = '$get_id'
 										order by date_added DESC ") or die(mysqli_error($conn));
 									/* $row = mysqli_fetch_array($sqla); */
 									$rowa = mysqli_fetch_array($sqla);
-
-									/* $rowa   = $row['quiz_id']; */
-									/* $sqla = mysqli_query($conn,"SELECT * FROM class_quiz WHERE course_code = '".$row['course_code']."'"); */
-
 									?>
 									<h3>Test Title: <b>
 											<?php echo $rowa['quiz_title']; ?>
