@@ -45,11 +45,14 @@ The ALS Learning Management System (LMS) stands as an innovative educational pla
 ## Level 0 Diagram
 ![403408778_1114340293278919_9101323820933934242_n](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/41468ed8-4a64-4d3d-bad3-338a75b750c6)
 
-## Admin Landing Page
+## Landing Page
+![landingpager](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/b77f87b7-a36c-44cd-b868-a0b869d3df0a)
+
+## Admin Page
 ![landingpagea](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/becbc4a3-0fb2-46a1-9f78-ae1e80cbece3)
 
-## Student Landing Page
+## Student Page
 ![landingpage](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/8772c6da-2a13-4a22-b9b2-f1204ae2fc61)
 
-## Teacher Landing Page
+## Teacher Page
 ![landingpaget](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/7af1d212-2a44-45fd-85f7-ce2d66e9fd2c)
