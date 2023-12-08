@@ -36,7 +36,7 @@ Based on the given rubric, the group assessed the system and this is the result:
 |                              | Total                  |   100%  |                            |
 
 ## About the System
-
+The ALS Learning Management System (LMS) stands as an innovative educational platform designed to empower learners facing financial constraints. Utilizing HTML, CSS, JavaScript, and PHP, the system facilitates accessible online enrollment, module access, and progress tracking. Learners benefit from self-paced modules, real-time progress monitoring, and personalized support from ALS coordinators. With a focus on overcoming barriers to education, the system aims to provide inclusive and transformative learning experiences for ALS students, leveraging the potential of technology to bridge gaps and enhance educational outcomes.
 
 
 ## Context Diagram
