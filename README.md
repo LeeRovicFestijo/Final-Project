@@ -69,14 +69,16 @@ Besides those, they can view the user log and activity log. They show which Admi
 
 • The students can access the modules, take quizzes and assignments.
 
+• They also have a message feature that they can use to communicate with their teachers.
+
 ![landingpage](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/8772c6da-2a13-4a22-b9b2-f1204ae2fc61)
 
 ## Teacher Page
 • The teachers can manage their classes through the system.
 
-• They can add and delete downloadables, announcements, and assignments. 
+• The teachers can add and delete downloadables, announcements, and assignments. 
 
-• They can also make quizzes which will automatically compute for the scores of their students. The assignments however will be graded manually since assignments are of subjective nature.
+• They teachers can also make quizzes which will automatically compute for the scores of their students. The assignments however will be graded manually since assignments are of subjective nature.
 
 • They also have a message feature that they can use should they wish to communicate with their students or with other teachers. 
 	
