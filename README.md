@@ -55,6 +55,7 @@ Based on the given rubric, the group assessed the system and this is the result:
 
 ## Admin Page
 • The Admin can add, delete, and edit Subjects, Classes, and Barangays in the system. They can also, add, delete, and edit Admin Users, Students, and Teachers necessary information.
+
 • The Admin can also monitor the downloadable materials and uploaded assignments sent and posted by the students and teachers.
 Besides those, they can view the user log and activity log. They show which Administrator logged in, what changes they made, and when it the changes happened. 
 
@@ -62,15 +63,20 @@ Besides those, they can view the user log and activity log. They show which Admi
 
 ## Student Page
 • The students able to see their classes and classmates.
+
 • The students can check their progress.
+
 • The students can access the modules, take quizzes and assignments.
 
 ![landingpage](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/8772c6da-2a13-4a22-b9b2-f1204ae2fc61)
 
 ## Teacher Page
 • The teachers can manage their classes through the system.
+
 • They can add and delete downloadables, announcements, and assignments. 
+
 • They can also make quizzes which will automatically compute for the scores of their students. The assignments however will be graded manually since assignments are of subjective nature.
+
 • They also have a message feature that they can use should they wish to communicate with their students or with other teachers. 
 	
 ![landingpaget](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/7af1d212-2a44-45fd-85f7-ce2d66e9fd2c)
