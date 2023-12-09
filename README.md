@@ -40,9 +40,11 @@ The ALS Learning Management System (LMS) stands as an innovative educational pla
 
 
 ## Context Diagram
+  The system comprises three actors: Students, Teachers, and Administrators. Students are required to authenticate or create an account within the system to proceed with the enrollment process, which involves providing requisite information. Teachers assume the responsibility of guiding learners and overseeing their progress, which includes the ability to add or modify the modules available within the system. Admin are tasked with the formal processes of signing up, creating accounts, enrolling users, and logging into the system.
 ![386875071_1373993143547611_2143306515796927028_n](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/33fb4676-73f2-4d5f-abab-2bf90780f187)
 
 ## Level 0 Diagram
+  This DFD presented the complete system's process in a more detailed manner. This Level 0 DFD is more comprehensive as it divides each process into smaller sub-processes. These sub-processes provide the functionality of the overall system flow.
 ![403408778_1114340293278919_9101323820933934242_n](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/41468ed8-4a64-4d3d-bad3-338a75b750c6)
 
 ## Landing Page
