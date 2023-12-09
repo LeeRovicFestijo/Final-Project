@@ -50,13 +50,34 @@ Based on the given rubric, the group assessed the system and this is the result:
 ![403408778_1114340293278919_9101323820933934242_n](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/41468ed8-4a64-4d3d-bad3-338a75b750c6)
 
 ## Landing Page
+• Here, you can see the information about the system such as the calendar of events, directories and this is also where the students and teachers enroll to access the website.
 ![landingpager](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/b77f87b7-a36c-44cd-b868-a0b869d3df0a)
 
 ## Admin Page
+• The Admin can add, delete, and edit Subjects, Classes, and Barangays in the system. They can also, add, delete, and edit Admin Users, Students, and Teachers necessary information.
+• The Admin can also monitor the downloadable materials and uploaded assignments sent and posted by the students and teachers.
+Besides those, they can view the user log and activity log. They show which Administrator logged in, what changes they made, and when it the changes happened. 
+
 ![landingpagea](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/becbc4a3-0fb2-46a1-9f78-ae1e80cbece3)
 
 ## Student Page
+• The students able to see their classes and classmates.
+• The students can check their progress.
+• The students can access the modules, take quizzes and assignments.
+
 ![landingpage](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/8772c6da-2a13-4a22-b9b2-f1204ae2fc61)
 
 ## Teacher Page
+• The teachers can manage their classes through the system.
+• They can add and delete downloadables, announcements, and assignments. 
+• They can also make quizzes which will automatically compute for the scores of their students. The assignments however will be graded manually since assignments are of subjective nature.
+• They also have a message feature that they can use should they wish to communicate with their students or with other teachers. 
+	
 ![landingpaget](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/7af1d212-2a44-45fd-85f7-ce2d66e9fd2c)
+
+## Presentation Link:
+https://drive.google.com/file/d/1WBtYEdQ0tWC_YpyazcU8OPweuu9NUqkO/view?usp=drive_link
+
+
+
+
