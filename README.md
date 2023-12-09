@@ -51,6 +51,7 @@ Based on the given rubric, the group assessed the system and this is the result:
 
 ## Landing Page
 • Here, you can see the information about the system such as the calendar of events, directories , barangays, history and this is also where the students and teachers enroll to access the website.
+
 ![landingpager](https://github.com/LeeRovicFestijo/Final-Project/assets/117901938/b77f87b7-a36c-44cd-b868-a0b869d3df0a)
 
 ## Admin Page
